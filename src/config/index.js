@@ -1,16 +1,16 @@
 module.exports = {
   particles: {
     particles: {
-      number: { value: 20 },
+      number: { value: 40 },
       color: { value: ['#0be779', '#008a3e', '#a3ffce'] },
       opacity: {
         value: 0.5,
-        random: false,
+        random: true,
         anim: {
           enable: true,
           speed: 0.2,
           opacity_min: 0.3,
-          sync: true,
+          sync: false,
         },
       },
       size: {
@@ -19,7 +19,7 @@ module.exports = {
       },
       line_linked: {
         enable: true,
-        distance: 450,
+        distance: 400,
         color: '#ffffff',
         opacity: 0.1,
         width: 1,
@@ -30,7 +30,7 @@ module.exports = {
         direction: 'none',
         random: true,
         straight: false,
-        bounce: true,
+        bounce: false,
       },
     },
     interactivity: {

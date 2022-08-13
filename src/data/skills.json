@@ -1,9 +1,29 @@
 {
   "skills": [
     {
+      "id": 6,
+      "skillName": "HTML",
+      "amount": "86"
+    },
+    {
+      "id": 7,
+      "skillName": "CSS",
+      "amount": "75"
+    },
+    {
+      "id": 8,
+      "skillName": "Bootstrap",
+      "amount": "90"
+    },
+    {
       "id": 0,
-      "skillName": "Design",
-      "amount": "95"
+      "skillName": "Javascript",
+      "amount": "80"
+    },
+    {
+      "id": 3,
+      "skillName": "Typescript",
+      "amount": "70"
     },
     {
       "id": 1,
@@ -11,26 +31,53 @@
       "amount": "90"
     },
     {
-      "id": 2,
-      "skillName": "Photoshop",
-      "amount": "90"
+      "id": 15,
+      "skillName": "Next js",
+      "amount": "70"
     },
-    { "id": 3, "skillName": "Javascript", "amount": "85" },
     {
-      "id": 4,
-      "skillName": "Node.js",
+      "id": 9,
+      "skillName": "Material UI",
       "amount": "80"
     },
     {
+      "id": 10,
+      "skillName": "And Design",
+      "amount": "70"
+    },
+    {
+      "id": 2,
+      "skillName": "Node js",
+      "amount": "70"
+    },
+    {
+      "id": 4,
+      "skillName": "Express js",
+      "amount": "86"
+    },
+    {
+      "id": 11,
+      "skillName": "OOP",
+      "amount": "60"
+    },
+    {
+      "id": 12,
+      "skillName": "JWT",
+      "amount": "70"
+    },
+    {
       "id": 5,
-      "skillName": "REST",
+      "skillName": "MySql",
       "amount": "75"
     },
-    { "id": 6, "skillName": "Apollo", "amount": "70" },
-    { "id": 7, "skillName": "Gatsby", "amount": "70" },
     {
-      "id": 8,
-      "skillName": "Backend",
+      "id": 13,
+      "skillName": "MongoDB",
+      "amount": "55"
+    },
+    {
+      "id": 14,
+      "skillName": "Socket io",
       "amount": "60"
     }
   ]

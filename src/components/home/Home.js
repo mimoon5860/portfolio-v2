@@ -33,11 +33,12 @@ const Home = () => {
                     href="https://www.linkedin.com/in/mahmudul-islam-moon/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className='logo'
                   >
                     <img src={linkedin} alt="Linkedin Logo" width="50px" />
                   </a>
                 </div>
-                <div className="links">
+                <div className="links logo2">
                   <a
                     href="https://www.facebook.com/em.ai.moon"
                     target="_blank"
@@ -46,7 +47,7 @@ const Home = () => {
                     <img src={facebook} alt="Facebook Logo" width="50px" />
                   </a>
                 </div>
-                <div className="links">
+                <div className="links logo">
                   <a
                     href="https://github.com/mimoon5860"
                     target="_blank"
@@ -61,7 +62,7 @@ const Home = () => {
         </div>
         <div className={`greeting${!imageLoaded ? ' hide' : ''}`}>
           <Fade bottom distance="40px">
-            <div style={{ marginTop: '-200px' }}>
+            <div className='hello-text'>
               <h1 className="greeting-text">
                 Hi, I'm <span className="name">Moon</span>.{' '}
                 <span className="wave-emoji" role="img" aria-label="waving hand">
