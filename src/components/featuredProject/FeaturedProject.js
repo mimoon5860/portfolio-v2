@@ -1,48 +1,37 @@
 import React from 'react'
 import './FeaturedProject.css'
 
-const FeaturedProject = ({ name, link, description, colour, languages }) => {
+const FeaturedProject = ({ project }) => {
+  const { github, img, live, name, technologies, time } = project;
   return (
-    <a
-      className="featured-project-link"
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <div className="featured-project-wrapper">
-        <div className="featured-project">
-          <div
-            className="featured-project-bg"
-            style={{
-              background: colour,
-            }}
-          ></div>
-          <div className="featured-project-top">
-            <img
-              className="featured-project-image"
-              src={require(`../../images/logos/${name
-                .replace(/ /g, '')
-                .toLowerCase()}.png`)}
-              alt={`${name}-logo`}
-            />
-          </div>
-          <p>{description}</p>
-          <div className="project-info">
-            <div className="project-info-left">
-              {languages.map((language) => (
-                <div key={`${name}-${language.name}`} className="language">
-                  <div
-                    className="language-colour"
-                    style={{ backgroundColor: `${language.color}` }}
-                  ></div>
-                  <p className="language-name">{language.name}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+    <div className="project-link">
+      <div>
+        <div>
+          <img width='100%' src={img} alt={`Mahmudul islam moon project ${name}`} />
         </div>
+        <div className='project-name'>
+          <h3 style={{ margin: '5px 0' }}>{name}</h3>
+        </div>
+        <hr />
+        <div>
+
+        </div>
+        <div style={{ margin: '5px 50px', textAlign: 'start' }}>
+          <p style={{ marginBottom: '0' }}>Technologies</p>
+          <ul>
+            {technologies.map(tech => {
+              return <li key={tech}>{tech}</li>
+            })}
+          </ul>
+          <p>Duration: {time}</p>
+        </div>
+
       </div>
-    </a>
+      <div className='live-github'>
+        <a href={live} target="_blank" rel='noopener noreferrer'>Live</a>
+        <a href={github} target="_blank" rel='noopener noreferrer'>Github</a>
+      </div>
+    </div>
   )
 }
 

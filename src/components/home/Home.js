@@ -86,7 +86,7 @@ const Home = () => {
                   }}
                 />
               </h1>
-              <a className='download-resume' target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1I7hTDlndoiyMn1mR3Vf0N6PjHg8EiULq/view">Download Resume</a>
+              <a className='download-resume' target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/12_8NQzkTiBD9uRcsa2sl2x7knsfroFNV/view?usp=sharing">Download Resume</a>
             </div>
           </Fade>
         </div>

@@ -3,13 +3,17 @@
   width: 100%;
   max-width: 500px;
 }
+
 .contact-form {
   display: flex;
   flex-direction: column;
 }
+
 .email-success {
   text-align: center;
+  color: green;
 }
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,

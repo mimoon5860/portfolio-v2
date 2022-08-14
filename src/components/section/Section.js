@@ -1,6 +1,6 @@
-import React from 'react'
-import './Section.css'
-import { Fade } from 'react-reveal'
+import React from 'react';
+import './Section.css';
+import { Fade } from 'react-reveal';
 
 const Section = (props) => {
   return (

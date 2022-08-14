@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import './ContactForm.css'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 import { makeStyles } from '@material-ui/core/styles'
+import emailjs from 'emailjs-com';
 
 const useStyles = makeStyles((theme) => ({
   email: {
@@ -65,79 +66,65 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const ContactForm = () => {
-  const [status, setStatus] = useState('')
-  const [emailText, setEmailText] = useState('')
-  const [messageText, setMessageText] = useState('')
+  const form = useRef();
+  const [send, setSend] = useState(false);
+  const [values, setValues] = useState({ email: '', msg: '' })
+  const [isLoading, setIsLoading] = useState(false);
 
   const classes = useStyles()
 
-  const submitForm = (ev) => {
-    ev.preventDefault()
-    const form = ev.target
-    const data = new FormData(form)
-    const xhr = new XMLHttpRequest()
-    xhr.open(form.method, form.action)
-    xhr.setRequestHeader('Accept', 'application/json')
-    xhr.onreadystatechange = () => {
-      if (xhr.readyState !== XMLHttpRequest.DONE) return
-      if (xhr.status === 200) {
-        setEmailText('')
-        setMessageText('')
-        form.reset()
-        setStatus('SUCCESS')
-      } else {
-        setStatus('ERROR')
-      }
-    }
-    xhr.send(data)
-  }
+  const handleEmail = (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    emailjs.sendForm('service_exvxbog', 'template_l769n7f', form.current, 'user_XTqJbFq1kdADh5igo2O2Q')
+      .then((result) => {
+        setSend(true);
+        setValues({ email: '', msg: '' })
+        setIsLoading(false);
 
-  const handleEmailChange = (event) => {
-    const input = String(event.target.value)
-    setEmailText(input)
+      }, (error) => {
+        console.log(error.text);
+        setIsLoading(false);
+      });
   }
-
-  const handleMessageChange = (event) => {
-    const input = String(event.target.value)
-    setMessageText(input)
-  }
-
   return (
     <div className="contact-form-wrapper">
       <form
         className="contact-form"
-        onSubmit={submitForm}
-        action="https://formspree.io/mvolplar"
-        method="POST"
+        onSubmit={handleEmail}
+        ref={form}
       >
         <TextField
-          className={classes.email}
           type="email"
           name="email"
           label="Email"
-          value={emailText}
-          onChange={handleEmailChange}
+          className={classes.email}
+          value={values.email}
+          onChange={(e) => setValues({ ...values, email: e.target.value })}
           variant="filled"
         />
         <TextField
-          className={classes.message}
           type="text"
           name="message"
           label="Message"
-          value={messageText}
-          onChange={handleMessageChange}
+          className={classes.message}
+
+          value={values.msg}
+          onChange={(e) => setValues({ ...values, msg: e.target.value })}
           multiline
           rows="5"
           variant="filled"
         />
-        {status === 'SUCCESS' ? (
-          <p className="email-success">Thanks!</p>
+        {isLoading ? <Button className={classes.submit} disabled type="submit" variant="contained">
+          Loading...
+        </Button> : <>{send ? (
+          <p className="email-success">Your Message has been send!</p>
         ) : (
-          <Button className={classes.submit} type="submit" variant="contained">
+          <Button className={classes.submit}
+            type="submit" variant="contained">
             Submit
           </Button>
-        )}
-        {status === 'ERROR' && <p>Ooops! There was an error.</p>}
+        )}</>}
       </form>
     </div>
   )

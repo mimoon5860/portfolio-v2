@@ -1,27 +1,86 @@
 {
   "featured_projects": [
     {
-      "id": 0,
-      "name": "Cactus",
-      "link": "https://www.cactuscan.com/",
-      "description": "🌵 A responsive multi-page website made with wordpress for ease of updating & blog functionality. Used jQuery for custom animations and extension integration.",
-      "colour": "linear-gradient(to top, rgb(0, 122, 65),rgb(37, 207, 108))",
-      "languages": [
-        { "name": "Jquery", "color": "rgb(241, 224, 90)" },
-        { "name": "Wordpress", "color": "rgb(100, 219, 255)" }
-      ]
+      "name": "Time Style",
+      "img": "https://i.ibb.co/K015ksD/ss1.png",
+      "technologies": [
+        "React",
+        "React Router(v6)",
+        "Material UI",
+        "Firebase",
+        "Node.js",
+        "Express.js",
+        "MongoDB"
+      ],
+      "time": "3 days",
+      "github": "https://github.com/mimoon5860/niche-Products-client-side",
+      "live": "https://niche-product-f9625.web.app/"
     },
     {
-      "id": 1,
-      "name": "Bartini",
-      "link": "https://www.bartiniapp.com/",
-      "description": "🍹 A cocktail-making web application. Users can input ingredients and browse cocktails that can be made. Responsible for UI/UX on mobile & web.",
-      "colour": "linear-gradient(to bottom right, rgb(193, 56, 85),rgb(230, 162, 53))",
-      "languages": [
-        { "name": "JavaScript", "color": "rgb(241, 224, 90)" },
-        { "name": "CSS", "color": "rgb(86, 61, 124)" },
-        { "name": "UX/UI", "color": "white" }
-      ]
+      "name": "Green Tourism",
+      "img": "https://i.ibb.co/VtcfpgH/ss1.png",
+      "technologies": [
+        "React",
+        "React Router",
+        "React Bootstrap",
+        "Firebase",
+        "Node.js",
+        "Express.js",
+        "MongoDB"
+      ],
+      "time": "3 days",
+      "github": "https://github.com/mimoon5860/green-tourism-client-side",
+      "live": "https://green-tourism-e4d52.web.app/"
+    },
+    {
+      "name": "FairLife Doctors",
+      "img": "https://i.ibb.co/nRH88Bb/ss1.png",
+      "technologies": [
+        "React",
+        "React Router",
+        "React Bootstrap",
+        "Firebase"
+      ],
+      "time": "2 days",
+      "github": "https://github.com/mimoon5860/fairlife-doctors",
+      "live": "https://fairlife-doctors.web.app/"
+    },
+    {
+      "name": "LightSpeed Typing",
+      "img": "https://i.ibb.co/ZNs585y/ss1.png",
+      "technologies": [
+        "React",
+        "React Router",
+        "Tailwind"
+      ],
+      "time": "1 days",
+      "github": "https://github.com/mimoon5860/light-speed-typing",
+      "live": "https://mi-moon-lightspeedtyping.netlify.app/"
+    },
+    {
+      "name": "SuperHero Direction",
+      "img": "https://i.ibb.co/MDYQGWV/ss1.png",
+      "technologies": [
+        "React",
+        "HTML",
+        "CSS",
+        "Javascript"
+      ],
+      "time": "1 days",
+      "github": "https://github.com/mimoon5860/the-superhero-director",
+      "live": "https://mi-moon-build-research-team.netlify.app/"
+    },
+    {
+      "name": "Daylight Mart",
+      "img": "https://i.ibb.co/F72t19g/ss1.png",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "Javascript"
+      ],
+      "time": "1 days",
+      "github": "https://github.com/mimoon5860/daylight-mart",
+      "live": "https://mi-moon-daylight-mart.netlify.app/"
     }
   ]
 }
