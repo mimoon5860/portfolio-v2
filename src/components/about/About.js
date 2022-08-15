@@ -97,11 +97,13 @@ const About = () => {
             </div>
             <div className="location-wrapper">
               <img src={email} alt="" />
-              <p>mahmodulislammoon@gmail.com</p>
+              <div>
+                <p>mahmodulislammoon@gmail.com <br /> info@mimoonweb.com</p>
+              </div>
             </div>
             <div className="location-wrapper">
               <img src={phone} alt="" />
-              <p>+880 1779 525860</p>
+              <p>+880 1779 525860 <br /> +880 1518 790673</p>
             </div>
           </div>
         </Fade>
