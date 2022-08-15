@@ -69,7 +69,7 @@ const Home = () => {
                   👋
                 </span>
               </h1>
-              <h1 className="greeting-text">
+              <h2 className="greeting-text greeting-for-phone">
                 <Typewriter
                   options={{
                     strings: [
@@ -85,7 +85,7 @@ const Home = () => {
                     delay: 100,
                   }}
                 />
-              </h1>
+              </h2>
               <a className='download-resume' target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/12_8NQzkTiBD9uRcsa2sl2x7knsfroFNV/view?usp=sharing">Download Resume</a>
             </div>
           </Fade>
